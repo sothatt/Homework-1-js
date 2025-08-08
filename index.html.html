@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-primary-subtle">
+    <main>
+        <section class="form-area d-flex vh-100">
+            <div class="container justify-content-center align-content-center p-4">
+                <form action="" class="">
+                    <div class="row g-5">
+                        <div class="col-12 col-xl-6 p-3 text-white rounded-5" style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="" class="form-label">Name</label>
+                                    <input type="text" class="form-control my-2" id="name">
+                                </div>
+                                <div class="col-12">
+                                    <label for="" class="form-label">Email</label>
+                                    <input type="email" class="form-control my-2" id="email">
+                                </div>
+                                <div class="col-12">
+                                    <label for="" class="form-label">Age</label>
+                                    <input type="number" class="form-control my-2" id="age">
+                                </div>
+                                <div class="col-12">
+                                    <label for="" class="form-label">School</label>
+                                    <input type="text" class="form-control my-2" id="school">
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" onclick="getvalues()" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table  border="1" class="table">
+                                        <thead >
+                                            <tr class="table-warning">
+                                                <th>#id</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Age</th>
+                                                <th>School</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="text-dark">
+                                                <td></td>
+                                                <td id="rs-name"></td>
+                                                <td id="rs-gmail"></td>
+                                                <td id="rs-age"></td>
+                                                <td id="rs-school"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function getvalues(){
+            document.getElementById('rs-name').innerText = document.getElementById('name').value;
+            document.getElementById('rs-gmail').innerText = document.getElementById('email').value;
+            document.getElementById('rs-age').innerText = document.getElementById('age').value;
+            document.getElementById('rs-school').innerText = document.getElementById('school').value;
+        }
+    </script>
+</body>
+</html>
